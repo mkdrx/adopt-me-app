@@ -1,6 +1,5 @@
 # Adopt-Me App - Based on Brian Holt's Frontend Masters Course
-![adopt1](https://user-images.githubusercontent.com/99738621/193667285-cb964cf4-65cb-4888-ba9a-b017c005c44a.png)
-![adopt2](https://user-images.githubusercontent.com/99738621/193667305-f222310b-1ac5-45ef-9ab6-060a67a745de.png)
+![adopt](https://user-images.githubusercontent.com/99738621/194780670-edb267fb-ba1b-4de8-a3e9-e42cdc975d0e.png)
 
 - Clone the project
 
