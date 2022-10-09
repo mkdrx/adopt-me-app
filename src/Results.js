@@ -2,9 +2,11 @@ import Pet from "./Pet";
 
 const Results = ({ pets }) => {
   return (
-    <div>
+    <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-3">
       {!pets.length ? (
-        <h1>No Pets Found</h1>
+        <h1 className="mx-auto text-red-700 uppercase font-bold">
+          No Pets Found
+        </h1>
       ) : (
         pets.map((pet) => (
           <Pet

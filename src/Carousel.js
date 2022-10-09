@@ -20,16 +20,21 @@ class Carousel extends Component {
     const { images } = this.props;
 
     return (
-      <div className="carousel">
-        <img src={images[active]} alt="animal" />
-        <div className="carousel-smaller">
+      <div className="flex flex-items justify-around ">
+        <img
+          src={images[active]}
+          alt="animal"
+          className="w-1/5 h-1/5 rounded-full"
+        />
+        <div className="w-1/2">
           {images.map((photo, index) => (
             <img
               onClick={this.indexHandler}
               key={photo}
               src={photo}
               data-index={index}
-              className={index === active ? "active" : ""}
+              // {index === active ? "active" : ""}
+              className="w-48 h-48 inline-block m-5 cursor-pointer rounded-full"
               alt="animal thumbnail"
             />
           ))}
