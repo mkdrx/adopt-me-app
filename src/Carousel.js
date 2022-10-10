@@ -20,13 +20,13 @@ class Carousel extends Component {
     const { images } = this.props;
 
     return (
-      <div className="flex flex-items justify-around ">
+      <div className="flex flex-items justify-evenly">
         <img
           src={images[active]}
           alt="animal"
-          className="w-1/5 h-1/5 rounded-full"
+          className="w-80 h-80 rounded-full pl-1"
         />
-        <div className="w-1/2">
+        <div>
           {images.map((photo, index) => (
             <img
               onClick={this.indexHandler}

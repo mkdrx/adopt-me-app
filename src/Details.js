@@ -35,9 +35,9 @@ class Details extends Component {
       this.state;
 
     return (
-      <div className="mx-auto p-4">
+      <div className="w-2/3 h-screen bg-cyan-900 rounded-xl pt-5 mx-auto">
         <Carousel images={images} />
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col">
           <h1 className="text-center text-cyan-900 uppercase font-bold">
             {name}
           </h1>
@@ -48,23 +48,25 @@ class Details extends Component {
             {([theme]) => (
               <button
                 onClick={this.toggleModalHandler}
-                className="w-1/5 self-center rounded-lg px-6 py-2 text-white hover:opacity-50 border-none font-bold uppercase"
+                className="w-1/5 self-center rounded-lg px-8 py-2 mb-5 text-white hover:opacity-50 border-none font-bold uppercase hover:-translate-y-0.5 transition duration-150"
                 style={{ backgroundColor: theme }}
               >
                 Adopt {name}
               </button>
             )}
           </ThemeContext.Consumer>
-          <p className="w-1/2 self-center mt-1 px-3 py-1 bg-cyan-900 rounded-xl text-white shadow-lg shadow-cyan-800 text-sm">
+          <p className="w-1/2 self-center mt-1 p-3 bg-cyan-600 rounded-xl text-black shadow-lg shadow-cyan-400 text-xl">
             {description}
           </p>
           {showModal ? (
             <Modal>
-              <div className="bg-cyan-900 opacity-80 fixed inset-0 z-50 flex h-screen justify-center items-center text-white text-xl">
-                <h1>Would you like to adopt {name}?</h1>
-                <div className="buttons">
-                  <a href="https://bit.ly/pet-adopt">Yes</a>
-                  <button onClick={this.toggleModalHandler}>No</button>
+              <div className="flex h-screen justify-center items-center bg-cyan-900 opacity-80 fixed inset-0 z-50 text-white text-xl">
+                <div className="bg-cyan-500 rounded-lg p-5 text-black">
+                  <h1>Would you like to adopt {name}?</h1>
+                  <div className="flex flex-row justify-around">
+                    <a href="https://bit.ly/pet-adopt">Yes</a>
+                    <button onClick={this.toggleModalHandler}>No</button>
+                  </div>
                 </div>
               </div>
             </Modal>
